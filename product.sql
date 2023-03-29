@@ -1,4 +1,4 @@
-INSERT INTO vercel_commerce.products (name, price, quantity, picture_url) 
+INSERT INTO products (name, price, quantity, picture_url) 
 VALUES ('T-Shirt', 20.00, 10, 'http://example.com/tshirt.jpg'), 
        ('Jeans', 40.00, 5, 'http://example.com/jeans.jpg'), 
        ('Shirt', 25.00, 15, 'http://example.com/shirt.jpg'),

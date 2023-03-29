@@ -1,0 +1,1 @@
+Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`e_shopping`.`orders`, CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`product_ID`) REFERENCES `products` (`product_ID`))

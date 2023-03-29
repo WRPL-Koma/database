@@ -2,7 +2,7 @@
 DELIMITER //
 CREATE PROCEDURE add_item_to_cart(IN customer_ID INT, IN product_ID INT, IN quantity INT)
 BEGIN
-    INSERT INTO vercel_commerce.cart (customer_ID, product_ID, quantity)
+    INSERT INTO e_shopping.cart (customer_ID, product_ID, quantity)
     VALUES (customer_ID, product_ID, quantity);
 END //
 DELIMITER ;
@@ -11,7 +11,7 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE update_item_in_cart(IN customer_ID INT, IN product_ID INT, IN quantity INT)
 BEGIN
-    UPDATE vercel_commerce.cart
+    UPDATE e_shopping.cart
     SET quantity = quantity + quantity
     WHERE customer_ID = customer_ID AND product_ID = product_ID;
 END //
@@ -21,7 +21,7 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE delete_item_from_cart(IN customer_ID INT, IN product_ID INT)
 BEGIN
-    DELETE FROM vercel_commerce.cart
+    DELETE FROM e_shopping.cart
     WHERE customer_ID = customer_ID AND product_ID = product_ID;
 END //
 DELIMITER ;
@@ -30,7 +30,7 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE add_shipping_details(IN order_ID INT, IN address VARCHAR(255), IN city VARCHAR(255), IN country VARCHAR(255))
 BEGIN
-    INSERT INTO vercel_commerce.shipping_details (order_ID, address, city, country)
+    INSERT INTO e_shopping.shipping_details (order_ID, address, city, country)
     VALUES (order_ID, address, city, country);
 END //
 DELIMITER ;
@@ -39,7 +39,7 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE add_payment_details(IN order_ID INT, IN method VARCHAR(255))
 BEGIN
-    INSERT INTO vercel_commerce.payment (order_ID, method)
+    INSERT INTO e_shopping.payment (order_ID, method)
     VALUES (order_ID, method);
 END //
 DELIMITER ;
